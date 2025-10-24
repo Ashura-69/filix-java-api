@@ -30,7 +30,7 @@ tasks.named('test') {
 
 jib {
     from {
-        image = 'eclipse-temurin:21-jdk-alpine'
+        image = 'eclipse-temurin:24-jdk-alpine'
     }
     to {
         image = 'felix-api-jav:latest' // local image name
