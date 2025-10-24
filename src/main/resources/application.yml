@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: product-web-api
+  datasource:
+    url: jdbc:postgresql://dpg-d3teq9je5dus738t3tog-a.oregon-postgres.render.com:5432/dbsu6_rnp2
+
+    username: felix
+    password: KdHjBpUTck2oiVXEY9snnBCZC1uaEonc
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 5
+      connection-timeout: 30000
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: ${DB_DIALECT:org.hibernate.dialect.PostgreSQLDialect}
+        format_sql: true
+    open-in-view: true
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 500MB
+
+server:
+  port: ${PORT:8080}
+  error:
+    include-message: always
+
+file:
+  upload-dir: ${FILE_UPLOAD_DIR:./uploads}
+
+logging:
+  level:
+    com.setec: INFO
+    org.hibernate.SQL: WARN
