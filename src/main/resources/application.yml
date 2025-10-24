@@ -1,6 +1,6 @@
 spring:
   application:
-    name: product-web-api
+    name: felix-api-jav
   datasource:
     url: jdbc:postgresql://dpg-d3teq9je5dus738t3tog-a.oregon-postgres.render.com:5432/dbsu6_rnp2
 
